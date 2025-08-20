@@ -4,55 +4,58 @@
 <meta charset="UTF-8">
 <title>Gokul Bhusal</title>
 <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="jemdoc.css" type="text/css" />
 <style>
   body {
     font-family: 'Spectral', serif;
-    line-height: 1.6;
-    background: #f9f9f9;
-    color: #333;
     margin: 0;
     padding: 0;
+    background: #f9f9f9;
+    color: #333;
   }
-  #menu {
-    width: 200px;
-    float: left;
-    background: #eee;
-    padding: 20px;
-    box-sizing: border-box;
-    height: 100vh;
+
+  /* Top navigation bar */
+  nav {
+    width: 100%;
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
   }
-  #menu .menu-category {
-    font-weight: bold;
-    margin-bottom: 10px;
+  nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
   }
-  #menu .menu-item {
-    margin: 8px 0;
+  nav a:hover, nav a.current {
+    background: #555;
   }
-  #menu .menu-item a.current {
-    font-weight: bold;
-    color: #007bff;
-  }
+
+  /* Main content full width */
   #content {
-    margin-left: 220px;
-    padding: 20px;
-    max-width: 900px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
   }
+
   h1 { margin-bottom: 20px; }
   h2 { margin-top: 40px; margin-bottom: 20px; }
   a { color: #007bff; text-decoration: none; }
   a:hover { text-decoration: underline; }
+
   .flex-header {
     display: flex;
     align-items: center;
     gap: 20px;
     margin-bottom: 30px;
+    flex-wrap: wrap;
   }
   .flex-header img {
     width: 200px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
+
   .news-list {
     list-style: none;
     padding-left: 0;
@@ -60,6 +63,7 @@
   .news-list li {
     margin-bottom: 10px;
   }
+
   .link-buttons {
     display: flex;
     gap: 10px;
@@ -75,17 +79,32 @@
   .btn-scholar { background: #007bff; }
   .btn-github { background: #28a745; }
   .btn-mathgenealogy { background: #6c757d; }
+
   hr.dashed {
     border: none;
     border-top: 1px dashed #ccc;
     margin: 30px 0;
   }
+
   .footer {
     margin-top: 60px;
     font-size: 14px;
     color: #555;
+    text-align: center;
+  }
+
+  /* Responsive */
+  @media (max-width: 800px) {
+    .flex-header {
+      flex-direction: column;
+      text-align: center;
+    }
+    .flex-header img {
+      margin-bottom: 20px;
+    }
   }
 </style>
+
 <!-- MathJax -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 <script type="text/x-mathjax-config">
@@ -93,19 +112,21 @@ MathJax.Hub.Config({
   TeX: { equationNumbers: { autoNumber: "AMS" } }
 });
 </script>
+
 </head>
 <body>
 
-<div id="menu">
-  <div class="menu-category">Gokul Bhusal</div>
-  <div class="menu-item"><a href="index.html" class="current">About</a></div>
-  <div class="menu-item"><a href="CV.pdf" target="_blank">CV</a></div>
-  <div class="menu-item"><a href="research.html">Research</a></div>
-  <div class="menu-item"><a href="teaching.html">Teaching</a></div>
-  <div class="menu-item"><a href="Miscellaneous.html">Miscellaneous</a></div>
-</div>
+<!-- Top navigation -->
+<nav>
+  <a href="index.html" class="current">About</a>
+  <a href="CV.pdf" target="_blank">CV</a>
+  <a href="research.html">Research</a>
+  <a href="teaching.html">Teaching</a>
+  <a href="Miscellaneous.html">Miscellaneous</a>
+</nav>
 
-<div id="content">
+<!-- Main content -->
+<main id="content">
   <h1>Gokul Bhusal</h1>
 
   <div class="flex-header">
@@ -154,7 +175,7 @@ MathJax.Hub.Config({
   <div class="footer">
     Page generated 2025-08-20, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="_blank">jemdoc+MathJax</a>.
   </div>
-</div>
+</main>
 
 </body>
 </html>
