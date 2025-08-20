@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Gokul Bhusal</title>
+<title>Gokul Bhusal - Research</title>
 <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
 <style>
   body {
@@ -14,7 +14,6 @@
     color: #333;
   }
 
-  /* Full-page flex layout */
   .page-container {
     display: flex;
     min-height: 100vh;
@@ -39,14 +38,17 @@
     color: #007bff;
   }
 
-  /* Main content fills remaining width */
+  /* Main content */
   #content {
     flex: 1;
     padding: 40px 30px;
+    max-width: 1200px;
+    margin: auto;
   }
 
   h1 { margin-bottom: 20px; }
   h2 { margin-top: 40px; margin-bottom: 20px; }
+  h3 { margin-bottom: 10px; }
   a { color: #007bff; text-decoration: none; }
   a:hover { text-decoration: underline; }
 
@@ -62,34 +64,48 @@
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
 
-  .news-list {
+  .news-list, .project-links {
     list-style: none;
     padding-left: 0;
-  }
-  .news-list li {
-    margin-bottom: 10px;
+    margin: 0;
   }
 
-  .link-buttons {
+  .project-links {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-bottom: 15px;
   }
-  .link-buttons a {
+
+  .project-links a {
     text-decoration: none;
-    padding: 8px 12px;
+    padding: 6px 10px;
     border-radius: 5px;
-    color: white;
+    border: 1px solid currentColor;
   }
-  .btn-scholar { background: #007bff; }
-  .btn-github { background: #28a745; }
-  .btn-mathgenealogy { background: #6c757d; }
+  .btn-paper { color: #007bff; border-color: #007bff; }
+  .btn-code { color: #28a745; border-color: #28a745; }
+
+  figure {
+    text-align: center;
+    max-width: 800px;
+    margin: 15px auto;
+  }
+  figure img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  figcaption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 6px;
+  }
 
   hr.dashed {
     border: none;
     border-top: 1px dashed #ccc;
-    margin: 30px 0;
+    margin: 40px 0;
   }
 
   .footer {
@@ -98,24 +114,12 @@
     color: #555;
   }
 
-  /* Responsive: stack menu on top on small screens */
   @media (max-width: 800px) {
-    .page-container {
-      flex-direction: column;
-    }
-    #menu {
-      width: 100%;
-    }
-    #content {
-      padding: 20px;
-    }
-    .flex-header {
-      flex-direction: column;
-      text-align: center;
-    }
-    .flex-header img {
-      margin-bottom: 20px;
-    }
+    .page-container { flex-direction: column; }
+    #menu { width: 100%; }
+    #content { padding: 20px; }
+    .flex-header { flex-direction: column; text-align: center; }
+    .flex-header img { margin-bottom: 20px; }
   }
 </style>
 
@@ -131,113 +135,85 @@ MathJax.Hub.Config({
 <body>
 
 <div class="page-container">
+  <!-- Sidebar -->
   <nav id="menu">
     <div class="menu-category">Gokul Bhusal</div>
-    <div class="menu-item"><a href="index.html" class="current">About</a></div>
+    <div class="menu-item"><a href="index.html">About</a></div>
     <div class="menu-item"><a href="CV.pdf" target="_blank">CV</a></div>
-    <div class="menu-item"><a href="research.html">Research</a></div>
+    <div class="menu-item"><a href="research.html" class="current">Research</a></div>
     <div class="menu-item"><a href="teaching.html">Teaching</a></div>
     <div class="menu-item"><a href="Miscellaneous.html">Miscellaneous</a></div>
   </nav>
 
+  <!-- Main content -->
   <main id="content">
-<h1>Research</h1>
+    <h1>Research</h1>
+
+    <h2>Graduate Research Projects</h2>
+
+    <!-- Project 1 -->
+    <div style="border:1px solid #ddd; border-radius:8px; padding:20px; margin-bottom:30px; box-shadow:0 4px 6px rgba(0,0,0,0.05);">
+      <h3>A General Framework for Group Sparsity in Hyperspectral Unmixing Using Endmember Bundles</h3>
+      <p>Gokul Bhusal, Yifei Lou, Cristina Garcia-Cardona, Ekaterina Merkurjev</p>
+      <div class="project-links">
+        <a href="https://arxiv.org/abs/2505.14634" target="_blank" class="btn-paper">📄 Paper</a>
+        <a href="https://github.com/GokulBhusal/Hyperspectral_Unmixing" target="_blank" class="btn-code">💻 Code</a>
+      </div>
+      <figure>
+        <img src="photos/sparsity_effect.png" alt="Sparsity effect">
+        <figcaption>Effect of sparsity on different models.</figcaption>
+      </figure>
+    </div>
+
+    <hr class="dashed">
+
+    <!-- Project 2 -->
+    <div style="border:1px solid #ddd; border-radius:8px; padding:20px; margin-bottom:30px; box-shadow:0 4px 6px rgba(0,0,0,0.05);">
+      <h3>Malady: Multiclass Active Learning with Auction Dynamics on Graphs</h3>
+      <p>Gokul Bhusal, Kevin Miller, Ekaterina Merkurjev</p>
+      <div class="project-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/11018426" target="_blank" class="btn-paper">📄 Paper</a>
+        <a href="https://github.com/GokulBhusal/Auction_Active_learning" target="_blank" class="btn-code">💻 Code</a>
+      </div>
+      <figure>
+        <img src="photos/MALADY.jpg" alt="The flowchart of MALADY framework.">
+        <figcaption>The flowchart of the MALADY framework.</figcaption>
+      </figure>
+    </div>
+
+    <hr class="dashed">
+
+    <!-- Project 3 -->
+    <div style="border:1px solid #ddd; border-radius:8px; padding:20px; margin-bottom:30px; box-shadow:0 4px 6px rgba(0,0,0,0.05);">
+      <h3>Persistent Laplacian-enhanced Algorithm for Scarcely Labeled Data Classification</h3>
+      <p>Gokul Bhusal, Ekaterina Merkurjev, Guo-Wei Wei</p>
+      <div class="project-links">
+        <a href="https://link.springer.com/article/10.1007/s10994-024-06616-w" target="_blank" class="btn-paper">📄 Paper</a>
+        <a href="https://github.com/GokulBhusal/PL-MB0" target="_blank" class="btn-code">💻 Code</a>
+      </div>
+      <figure>
+        <img src="photos/methodvisualization.png" alt="The flowchart of PL-MBO framework.">
+        <figcaption>The flowchart of the PL-MBO algorithm.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Undergraduate Research Projects</h3>
+
+    <p><b>Honors College Thesis: Twisted Central Configurations of the Eight-Body problem</b></p>
+    <p><i>The University of Southern Mississippi, Hattiesburg, MS</i></p>
+    <p>I did an honors project advised by Professor <a href="https://www.math.usm.edu/xie/" target="_blank">Zhifu Xie</a>. We studied twisted central configurations of the eight-body problem, and showed that when the two square configurations share a centroid, a central configuration is possible only if the size ratio falls into one of three intervals. Numerical evidence suggests exactly three nested central configurations exist for each mass ratio.</p>
+    <p><a href="https://aquila.usm.edu/honors_theses/703/" target="_blank">See my honors thesis</a></p>
+
+    <p><b>Wright W. and Annie Rea Cross Research: Central configurations in the planar 6-body problem forming two equilateral triangles</b></p>
+    <p><i>The University of Southern Mississippi, Hattiesburg, MS</i></p>
+    <p>I was fortunate to receive the Wright W. and Annie Rea Cross Mathematics Undergraduate Research Scholarship. As a cross scholar, I worked with Professor <a href="https://www.math.usm.edu/xie/" target="_blank">Zhifu Xie</a> and <a href="https://www.linkedin.com/in/hamas-tahir-111710b8/" target="_blank">Hamas Tahir</a> on central configurations in six-body systems with equilateral triangles. Detailed numerical analysis revealed nested central configurations and twisted CCs under specific conditions.</p>
+    <p><a href="https://www.sciencedirect.com/science/article/pii/S0393044020300462" target="_blank">See the published paper</a></p>
+
+    <div class="footer">
+      Page generated 2022-06-20, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="_blank">jemdoc+MathJax</a>.
+    </div>
+  </main>
 </div>
-<h2>Graduate Research Projects</h2>
 
-<!-- Project 1 -->
-<div style="border:1px solid #ddd; border-radius:8px; padding:20px; margin-bottom:30px; box-shadow:0 4px 6px rgba(0,0,0,0.05);">
-  <h3><b>A General Framework for Group Sparsity in Hyperspectral Unmixing Using Endmember Bundles</b></h3>
-  <p>Gokul Bhusal, Yifei Lou, Cristina Garcia-Cardona, Ekaterina Merkurjev</p>
-  
-  <div style="display:flex; gap:15px; flex-wrap:wrap; margin-bottom:20px;">
-    <a href="https://arxiv.org/abs/2505.14634" target="_blank" style="text-decoration:none; padding:8px 12px; border:1px solid #007bff; border-radius:5px; color:#007bff;">📄 Paper</a>
-    <a href="https://github.com/GokulBhusal/Hyperspectral_Unmixing" target="_blank" style="text-decoration:none; padding:8px 12px; border:1px solid #28a745; border-radius:5px; color:#28a745;">💻 Code</a>
-  </div>
-
-  <figure style="text-align:center; max-width:800px; margin:auto;">
-    <img src="photos/sparsity_effect.png" alt="Sparsity effect" style="width:100%; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s;">
-    <figcaption style="font-size:14px; color:#555; margin-top:6px;">Effect of sparsity on different models.</figcaption>
-  </figure>
-</div>
-
-<hr style="border:1px dashed #aaa; margin:40px 0;">
-
-<!-- Project 2 -->
-<div style="border:1px solid #ddd; border-radius:8px; padding:20px; margin-bottom:30px; box-shadow:0 4px 6px rgba(0,0,0,0.05);">
-  <h3><b>Malady: Multiclass Active Learning with Auction Dynamics on Graphs</b></h3>
-  <p>Gokul Bhusal, Kevin Miller, Ekaterina Merkurjev</p>
-  
-  <div style="display:flex; gap:15px; flex-wrap:wrap; margin-bottom:20px;">
-    <a href="https://ieeexplore.ieee.org/abstract/document/11018426" target="_blank" style="text-decoration:none; padding:8px 12px; border:1px solid #007bff; border-radius:5px; color:#007bff;">📄 Paper</a>
-    <a href="https://github.com/GokulBhusal/Auction_Active_learning" target="_blank" style="text-decoration:none; padding:8px 12px; border:1px solid #28a745; border-radius:5px; color:#28a745;">💻 Code</a>
-  </div>
-
-  <figure style="text-align:center; max-width:800px; margin:auto;">
-    <img src="photos/MALADY.jpg" alt="The flowchart of MALADY framework." style="width:100%; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
-    <figcaption style="font-size:14px; color:#555; margin-top:6px;">The flowchart of the MALADY framework.</figcaption>
-  </figure>
-</div>
-
-<hr style="border:1px dashed #aaa; margin:40px 0;">
-
-<!-- Project 3 -->
-<div style="border:1px solid #ddd; border-radius:8px; padding:20px; margin-bottom:30px; box-shadow:0 4px 6px rgba(0,0,0,0.05);">
-  <h3><b>Persistent Laplacian-enhanced Algorithm for Scarcely Labeled Data Classification</b></h3>
-  <p>Gokul Bhusal, Ekaterina Merkurjev, Guo-Wei Wei</p>
-  
-  <div style="display:flex; gap:15px; flex-wrap:wrap; margin-bottom:20px;">
-    <a href="https://link.springer.com/article/10.1007/s10994-024-06616-w" target="_blank" style="text-decoration:none; padding:8px 12px; border:1px solid #007bff; border-radius:5px; color:#007bff;">📄 Paper</a>
-    <a href="https://github.com/GokulBhusal/PL-MB0" target="_blank" style="text-decoration:none; padding:8px 12px; border:1px solid #28a745; border-radius:5px; color:#28a745;">💻 Code</a>
-  </div>
-
-  <figure style="text-align:center; max-width:800px; margin:auto;">
-    <img src="photos/methodvisualization.png" alt="The flowchart of PL-MBO framework." style="width:100%; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
-    <figcaption style="font-size:14px; color:#555; margin-top:6px;">The flowchart of the PL-MBO algorithm.</figcaption>
-  </figure>
-</div>
-
-
-<h3>Undergraduate Research Projects</h3>
-<p><b>Honors College Thesis: Twisted Central Configurations of the Eight-Body problem</b>
-</p>
-<p><i>The University of Southern Mississippi, Hattiesburg, MS </i>
-</p>
-<p> I did an honors project advised by Professor <a href="https://www.math.usm.edu/xie/" target=&ldquo;blank&rdquo;> Zhifu Xie </a>. I studied a special type of central configuration: twisted central configurations of the eight-body problem. We showed that when the
-two square configurations have a common centroid, the configuration can form a central
-configuration only if the ratio of the size of the two squares falls into one of three intervals.
-Moreover there are some numerical evidences that there are exactly three nested central
-configurations for each given mass ratio m1/m5.
-</p>
-<p><a href="https://aquila.usm.edu/honors_theses/703/" target=&ldquo;blank&rdquo;>See my honors thesis</a>
-</p>
-<p><br />
-</p>
-<p><b>
-Wright W. and Annie Rea Cross Research: Central configurations in the planar 6-body problem forming two equilateral triangles</b>
-</p>
-<p><i>The University of Southern Mississippi, Hattiesburg, MS</i>
-</p>
-<p> I was fortunate to get Wright W. and Annie Rea Cross Mathematics Undergraduate Research Scholarship. As a cross scholar, I worked with Professor <a href="https://www.math.usm.edu/xie/" target=&ldquo;blank&rdquo;> Zhifu Xie </a> and <a href="https://www.linkedin.com/in/hamas-tahir-111710b8/" target=&ldquo;blank&rdquo;> Hamas Tahir </a> on this project. In this project, six bodies are located on two equilateral triangles 123 and 456. Assume that both triangles are symmetrical about the line connecting m3 and m4. Within these configurations, the six body configuration is not a central configuration if the triangle 123
- is above or below the triangle 456. It is also not a central configuration if more than two of the six bodies are collinear. When the two equilateral triangle configurations have a common centroid, masses on each equilateral triangles must be same respectively and the configuration can form a central configuration only if the ratio of the lengths of the sides between
- 123 and 456 falls into one of five intervals. Moreover there are some numerical evidences that, first there are exactly two nested central configurations but there may be one, two, or three twisted nested CCs for a given mass ratio; and second, there exists central configurations other than same centroid.
-
-
-
-<p><a href="https://www.sciencedirect.com/science/article/pii/S0393044020300462" target=&ldquo;blank&rdquo;>See the published paper</a></p>
-<div id="footer">
-<div id="footer-text">
-Page generated 2022-06-20, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
-</div>
-</div>
-</td>
-</tr>
-</table>
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-</script>
-<script type="text/javascript">
-_uacct = "UA-0000000-0";
-urchinTracker();
-</script>
 </body>
 </html>
