@@ -2,30 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Gokul Bhusal</title>
-<link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
+<title>Teaching</title>
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
 <style>
   body {
-    font-family: 'Spectral', serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background: #f9f9f9;
     color: #333;
   }
-
-  /* Full-page flex layout */
-  .page-container {
-    display: flex;
-    min-height: 100vh;
-  }
-
-  /* Sidebar menu */
   #menu {
-    width: 220px;
+    width: 200px;
+    float: left;
     background: #eee;
     padding: 20px;
     box-sizing: border-box;
+    height: 100vh;
   }
   #menu .menu-category {
     font-weight: bold;
@@ -38,158 +32,78 @@
     font-weight: bold;
     color: #007bff;
   }
-
-  /* Main content fills remaining width */
   #content {
-    flex: 1;
-    padding: 40px 30px;
+    margin-left: 220px;
+    padding: 20px;
+    max-width: 900px;
   }
-
   h1 { margin-bottom: 20px; }
   h2 { margin-top: 40px; margin-bottom: 20px; }
-  a { color: #007bff; text-decoration: none; }
-  a:hover { text-decoration: underline; }
 
-  .flex-header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
-  }
-  .flex-header img {
-    width: 200px;
+  .teaching-card {
+    background: #fff;
+    padding: 15px 20px;
+    margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   }
-
-  .news-list {
-    list-style: none;
-    padding-left: 0;
+  .teaching-card li {
+    margin: 6px 0;
   }
-  .news-list li {
-    margin-bottom: 10px;
-  }
-
-  .link-buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-  }
-  .link-buttons a {
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    color: white;
-  }
-  .btn-scholar { background: #007bff; }
-  .btn-github { background: #28a745; }
-  .btn-mathgenealogy { background: #6c757d; }
-
   hr.dashed {
     border: none;
-    border-top: 1px dashed #ccc;
+    border-top: 1px dashed #aaa;
     margin: 30px 0;
   }
-
   .footer {
     margin-top: 60px;
     font-size: 14px;
     color: #555;
   }
-
-  /* Responsive: stack menu on top on small screens */
-  @media (max-width: 800px) {
-    .page-container {
-      flex-direction: column;
-    }
-    #menu {
-      width: 100%;
-    }
-    #content {
-      padding: 20px;
-    }
-    .flex-header {
-      flex-direction: column;
-      text-align: center;
-    }
-    .flex-header img {
-      margin-bottom: 20px;
-    }
-  }
 </style>
-
-<!-- MathJax -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
-
 </head>
 <body>
 
-<div class="page-container">
-  <nav id="menu">
-    <div class="menu-category">Gokul Bhusal</div>
-    <div class="menu-item"><a href="index.html" class="current">About</a></div>
-    <div class="menu-item"><a href="CV.pdf" target="_blank">CV</a></div>
-    <div class="menu-item"><a href="research.html">Research</a></div>
-    <div class="menu-item"><a href="teaching.html">Teaching</a></div>
-    <div class="menu-item"><a href="Miscellaneous.html">Miscellaneous</a></div>
-  </nav>
+<div id="menu">
+  <div class="menu-category">Gokul Bhusal</div>
+  <div class="menu-item"><a href="index.html">About</a></div>
+  <div class="menu-item"><a href="CV.pdf" target="_blank">CV</a></div>
+  <div class="menu-item"><a href="research.html">Research</a></div>
+  <div class="menu-item"><a href="teaching.html" class="current">Teaching</a></div>
+  <div class="menu-item"><a href="Miscellaneous.html">Miscellaneous</a></div>
+</div>
 
-  <main id="content">
-    <h1>Gokul Bhusal</h1>
+<div id="content">
+  <h1>Teaching</h1>
 
-    <div class="flex-header">
-      <img src="gokulbhusal.JPG" alt="Gokul Bhusal">
-      <div>
-        <p>
-          I am a sixth-year PhD candidate in Applied Mathematics at 
-          <a href="https://math.msu.edu/" target="_blank">Michigan State University</a>, 
-          working under the guidance of Professor 
-          <a href="https://users.math.msu.edu/users/merkurje/" target="_blank">Ekaterina Merkurjev</a>.
-        </p>
-        <p>
-          I graduated from The University of Southern Mississippi in 2020 with a BS in Mathematics and a Minor in Computer Science.
-        </p>
-        <p>
-          My research interests include graph-based methods, active learning, optimization algorithms, and hyperspectral image analysis.
-        </p>
-        <p>
-          I am graduating in Spring 2026 and am seeking a postdoctoral position.
-        </p>
-      </div>
-    </div>
+  <ul style="padding-left: 0; list-style: none;">
+    <li class="teaching-card">💻 MTH 483: Mathematics of Machine Learning (TA) — Spring 2025</li>
+    <li class="teaching-card">💻 MTH 314: Matrix Algebra with Computational Applications (TA) — Summer 2024</li>
 
-    <h2>Contact</h2>
-    <p>Email: bhusalgo@msu.edu <br />
-    Office: C533 Wells Hall</p>
+    <li class="teaching-card">
+  💻 MTH 852: Numerical Methods for ODE (TA) — Spring 2024
+  <div style="font-size: 0.9em; color: #555; margin-top: 4px;">
+    Qualifying exam course. Hosted weekly qualifying exam preparation recitations.
+  </div>
+</li>
+    <li class="teaching-card">
+  💻 MTH 852: Numerical Linear Algebra (TA) — Fall 2023
+  <div style="font-size: 0.9em; color: #555; margin-top: 4px;">
+    Qualifying exam course. Hosted weekly qualifying exam preparation recitations.
+  </div>
+</li>
+   
+    <li class="teaching-card">💻 MTH 314: Matrix Algebra with Computational Applications (TA) — Spring 2023</li>
+    <li class="teaching-card">📚 MTH 133: Calculus II (Recitation Instructor) — Fall 2022</li>
+    <li class="teaching-card">🧑‍🏫 MTH 132: Calculus I (Instructor of Record) — Summer 2022</li>
+    <li class="teaching-card">📚 MTH 133: Calculus II (Recitation Instructor) — Spring 2022</li>
+    <li class="teaching-card">📚 MTH 133: Calculus II (Recitation Instructor) — Fall 2021</li>
+    <li class="teaching-card">📚 MTH 133: Calculus II (Recitation Instructor) — Summer 2021</li>
+  </ul>
 
-    <hr class="dashed">
-
-    <h2>News</h2>
-    <ul class="news-list">
-      <li><b>Feb 2023:</b> Passed comprehensive exam and became a PhD candidate.</li>
-      <li><b>June 2021:</b> Passed qualifying exams.</li>
-      <li><b>Aug 2020:</b> Started graduate school at Michigan State University.</li>
-    </ul>
-
-    <hr class="dashed">
-
-    <h2>Links</h2>
-    <div class="link-buttons">
-      <a href="https://scholar.google.com/citations?user=bgEgna4AAAAJ&hl=en&oi=ao" target="_blank" class="btn-scholar">Scholar Profile</a>
-      <a href="https://github.com/GokulBhusal" target="_blank" class="btn-github">GitHub Projects</a>
-      <a href="https://www.mathgenealogy.org/" target="_blank" class="btn-mathgenealogy">Math Genealogy</a>
-    </div>
-
-    <div class="footer">
-      Page generated 2025-08-20, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="_blank">jemdoc+MathJax</a>.
-    </div>
-  </main>
+  <div class="footer">
+    Page generated 2025-08-20, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="_blank">jemdoc+MathJax</a>.
+  </div>
 </div>
 
 </body>
